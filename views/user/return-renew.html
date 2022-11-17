@@ -1,0 +1,69 @@
+<%- include ('../partials/header.html') %>
+
+</head>
+
+<body>
+
+<!--NAVIGATION BAR FOR USER-->
+<%- include ('../partials/userNav.html') %>
+
+
+<!--DASHBOARD SECTION-->
+<header id="main-header" class="py-2 bg-info text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1><i class="fa fa-retweet"></i>Add Project</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="mt-4 py-3">
+    <div class="container">
+      <div class="container my-4">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <div class="card">
+              <div class="card-header text-center">
+                <h4>Add Project</h4>
+              </div>
+              <div class="card-block">
+                <form class="p-3" action="/admin/projects/add" method="POST">
+                  <div class="form-group">
+                    <label class="form-control-label">Title</label>
+                    <input type="text" name="project[title]" placeholder="Project Title" class="form-control" required />
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="form-control-label">Team Member Name</label>
+                    <input type="text" name="project[author]" placeholder=" Name" class="form-control" required />
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="form-control-label">Category</label>
+                    <input type="text" name="project[category]" placeholder="Project Category" class="form-control" required />
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="form-control-label">time</label>
+                    <input type="Number" name="project[stock]" placeholder="Project Stocks" class="form-control" required />
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="form-control-label">Project Description</label>
+                    <textarea name="project[description]" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block">Add Project</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</section>
+
+<% include ('../partials/footer.html') %>
